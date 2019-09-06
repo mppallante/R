@@ -1,0 +1,17 @@
+require(shiny)
+require(shinydashboard)
+
+##### UI
+ui <- dashboardPage(
+        dashboardHeader(),
+        dashboardSidebar(),
+        dashboardBody()
+      )
+
+##### SERVER
+server <- function(input, output) { 
+
+}
+
+##### APP RUN 
+runApp(shinyApp(ui, server), port=8082)
