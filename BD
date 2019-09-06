@@ -1,0 +1,20 @@
+require(odbc)
+require(DBI)
+
+##### Conexão Banco de Dados
+conexao = function(){
+        return(dbConnect(odbc::odbc(),
+                         Driver   = " ",
+                         Server   = " ",
+                         Database = " ",
+                         UID      = " ",
+                         pwd      = " "))
+}
+con <- conexao()
+
+##### Consulta Banco de Dados
+consulta = function(query){
+        x <- dbGetQuery(con, query)
+        x <- as.data.table(query)
+        return(x)
+}
