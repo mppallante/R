@@ -1,0 +1,83 @@
+##### Biblioteca de Gráficos Responsivos e Interativos - PLOTLY
+
+# Pacote
+require(plotly)
+
+##### GRAFICO DE BARRAS
+
+p <- plot_ly(
+  x = ,
+  y = ,
+  name = "NOME",
+  type = "bar"
+)
+
+##### GRAFICO DE BARRAS - AGRUPADO
+
+p <- plot_ly(data = ,
+             x = ~, 
+             y = ~, 
+             type = 'bar', 
+             name = 'NOME1') %>%
+  add_trace(y = ~, 
+            name = 'NOME2') %>%
+  layout(yaxis = list(title = 'NOME EIXO Y'), barmode = 'group')
+  
+##### GRAFICO DE PIZZA
+
+p <- plot_ly(data = , 
+             labels = ~, 
+             values = ~, 
+             type = 'pie') %>%
+  layout(title = 'TITULO DO GRAFICO',
+         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+         
+##### GRAFICO DE LINHA
+
+p <- plot_ly(data = , 
+             x = ~, 
+             y = ~, 
+             type = 'scatter', 
+             mode = 'lines')
+             
+##### GRAFICO DE DISPERSÃO (SCATTER)
+
+p <- plot_ly(data = , 
+             x = ~ , 
+             y = ~ ,
+             type = 'scatter',
+             mode = 'markers')
+             
+##### GRAFICO DE BOLHAS
+
+p <- plot_ly(data = , 
+             x = ~ , 
+             y = ~ , 
+             text = ~ , 
+             type = 'scatter', 
+             mode = 'markers',
+        marker = list(size = ~ , opacity = 0.5)) %>%
+  layout(title = 'TITULO DO GRÁFICO',
+         xaxis = list(showgrid = FALSE),
+         yaxis = list(showgrid = FALSE))
+         
+##### GRAFICO BOXPLOT
+
+p <- plot_ly(x = ~, 
+             y = ~, 
+             type = "box")
+             
+##### GRAFICO VIOLINO
+
+p <- plot_ly(x = ~, 
+             y = ~, 
+             type = "violin") 
+             
+##### GRAFICO 3D SCATTER
+
+p <- plot_ly(data = , 
+             x = ~ , 
+             y = ~ , 
+             z = ~ )
+
