@@ -14,5 +14,5 @@ Base %>%
   addTiles() %>% 
   addMarkers(lng = ~Longitude, 
              lat = ~Latitude, 
-             popup = ~LOCALIDADE,
+             popup = ~Categoria,
              clusterOptions = markerClusterOptions())
