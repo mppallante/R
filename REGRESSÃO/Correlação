@@ -1,0 +1,14 @@
+require(stats)
+require(corrplot)
+
+##### TESTE DE CORRELAÇÃO
+   ## pearson  - Dados parametricos - Seguem uma NORMAL
+   ## kendall  - Dados não parametricos - Não seguem NORMAL - Amostra PEQUENA (< 30)
+   ## spearman - Dados não parametricos - Não seguem NORMAL - Amostra GRANDE  (> 30)
+cor(frame , method = 'kendall')
+correlacao = cor(frame , method = 'kendall')
+##### GRÁFICO DE CORRELAÇÃO
+   ## method = 'number' - Mostra o valor real da correlação
+   ## method = 'pie'    - Mostra a correlação em pizza
+   ## type   = 'lower'  - Mostra sem repetição a metade inferior do gráfico
+corrplot(correlacao, method = 'number')
