@@ -1,0 +1,13 @@
+require(openair)
+
+# FORMATO DO DATAFRAME
+data.frame(
+    Data = 'COLUNA CONTENDO AS DATAS - FORMATO TIME POSIX'
+    nox  = 'COLUNA CONTENDO OS VALORES PARA O MAPA DE CALOR'
+)
+
+calendarPlot(data = , 
+             pollutant = "nox", 
+             year = ANO, 
+             statistic = "max", 
+             cols = "YlOrRd")
