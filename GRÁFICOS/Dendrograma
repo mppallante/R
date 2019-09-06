@@ -1,0 +1,10 @@
+# GRAFICO INTERATIVO PARA DENDOGRAMA - collapsibleTree
+
+# Pacote
+require(collapsibleTree)
+
+collapsibleTree(data = , 
+                c("COLUNA 1", "COLUNA 2", "COLUNA 3", "COLUNA n..."),
+                fill = "lightsteelblue", 
+                zoomable = F, 
+                fontSize = 12)
