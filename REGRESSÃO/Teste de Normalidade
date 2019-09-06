@@ -1,0 +1,7 @@
+##### TESTE DE NORMALIDADE
+    ## Para p-value < 0.05 -  Dados não possuem distribuição normal !!!
+shapiro.test(frame$Prer.V1)
+    ## Histograma
+    ## NORMAL  - Dados concentrados na média da amostra
+    ## POISSON - Dados concentrados muito abaixo da média - Frequencia perto de 0
+hist(frame$Prer.V1)
