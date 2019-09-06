@@ -1,0 +1,13 @@
+##### REGRESSÃO LINEAR
+   ## Y - Variavel resposta
+   ## X - Variavel explicativa
+lm(y ~ x)
+linear = lm(y ~ x)
+
+##### PREDIÇÃO DA REGRESSÃO LINEAR
+predicao = data.frame(
+  'Variavel explicativa (X)' = 'Valor OU Conjunto de valores'
+)
+
+##### PREDIÇÃO
+predict(linear, x = predicao)
