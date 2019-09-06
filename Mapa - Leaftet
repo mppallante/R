@@ -1,0 +1,18 @@
+# Biblioteca
+require(leaflet)
+
+# Formato dos dados 
+# [CATEGORIA, LATITUDE, LONGITUDE]
+Base$Latitude <- as.numeric(Base$Latitude)
+Base$Longitude <- as.numeric(Base$Longitude)
+# Remover linhas nulas
+Base <- drop_na(Base)
+
+# Mapa - Leaflet
+Base %>% 
+  leaflet() %>% 
+  addTiles() %>% 
+  addMarkers(lng = ~Longitude, 
+             lat = ~Latitude, 
+             popup = ~LOCALIDADE,
+             clusterOptions = markerClusterOptions())
