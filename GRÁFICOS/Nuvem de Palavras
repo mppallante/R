@@ -1,0 +1,10 @@
+require(wordcloud2)
+##### Contagem de palavras
+contaPalavras <- function(linhas) {
+  palavras <- strsplit(linhas, "\\W+")
+  todas <- unlist(palavras)
+  contagem <- table(todas)
+  contagem[order(-contagem)]
+}
+DataFrame = as.data.frame(contaPalavras(XXXXXXXXXX))
+wordcloud2(DataFrame)
