@@ -1,0 +1,10 @@
+##### SUNBURST #####
+require(sunburstR)
+require(d3r)
+
+### Agrupamento e Volume
+Base <- Base %>% group_by(CATEGORICO_1, CATEGORICO_2) %>% summarise(size=n())
+### Arvore
+tree <- d3_nest(Base, value_cols = "size")
+### Plot Sunburst
+sund2b(tree)
