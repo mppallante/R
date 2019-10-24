@@ -1,0 +1,20 @@
+-- Últimos 30 DIAS
+between DATEADD(DAY, -30 , GETDATE()) AND getdate()
+
+-- MÊS Atual
+MONTH(GETDATE())
+
+-- MÊS Passado
+MONTH(GETDATE())-1
+
+-- Últimos 2 MESES
+IN (MONTH(GETDATE()), MONTH(GETDATE())-1)
+
+-- ANO Atual
+YEAR(GETDATE())
+
+-- ANO Passado
+YEAR(GETDATE())-1
+
+-- Últimos 2 ANOS
+IN (YEAR(GETDATE()), YEAR(GETDATE())-1)
