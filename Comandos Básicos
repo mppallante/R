@@ -38,3 +38,23 @@ subset[Base, EXPRESSÃO LOGICA]
                   
 ##### FILTRO PELA TABELA
 Base[FILTRO LOGICO, EXPRESSÃO MATEMATICA, .(COLUNA1, COLUNA2, COLUNAn...)]
+
+##### ESTATISTICA
+## MEDIA
+mean(dado)
+## MEDIANA
+median(dado)
+## VARIANCIA
+var(dado)
+## DESVIO PADRÃO
+sd(dado)
+## QUARTIS 
+quantile(dado)
+## DESCRIÇÃO DOS DADOS
+summary(dados)
+
+##### DISTRIBUIÇÃO BINOMIAL
+# X = Sucesso
+# SIZE = nº de Experimentos
+# PROP = Probabilidade de acertos (0 - 1)
+dbinom(x, size, prob) 
