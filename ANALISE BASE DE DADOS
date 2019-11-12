@@ -1,0 +1,91 @@
+---
+title: "ANALISE DE DADOS"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+<strong>DESCREVENDO A BASE DE DADOS:</strong>
+<br>
+
+```{r Pacotes, include=FALSE}
+  library(funModeling) 
+  library(tidyverse) 
+  library(Hmisc)
+  library(GGally)
+
+  ################################
+  # INSIRA SUA BASE DE DADOS AQUI!
+  
+  MyData <-  # <----- DADOS
+
+  ################################
+  
+  
+  MyData <- as.data.frame(MyData)
+```
+
+<br>
+<strong>PRIMEIRAS LINHAS:</strong> 
+<br>
+
+```{r glimpse, echo=FALSE}
+   glimpse(MyData)
+```
+
+<br>
+<strong>INFORMAÇÕES SOBRE AS COLUNAS:</strong>
+<br>
+
+```{r df_status, echo=FALSE}
+  df_status(MyData)
+```
+
+<br>
+<strong>FREQUÊNCIA DOS DADOS CATEGORICOS:</strong>
+<br>
+
+```{r freq, echo=FALSE, fig.width=12, message=TRUE, warning=TRUE}
+  freq(MyData)
+```
+
+<br>
+<strong>DESCRIÇÃO DOS DADOS NUMERICOS:</strong>
+<br>
+
+```{r profiling_num, echo=FALSE}
+  profiling_num(MyData)
+```
+
+<br>
+<strong>GRÁFICO DOS DADOS NUMERICOS:</strong>
+<br>
+
+```{r plot_num, echo=FALSE, fig.width=12}
+  plot_num(MyData)
+```
+
+<br>
+<strong>DESCRIÇÃO E ESTATISTICA GERAL DOS DADOS:</strong>
+<br>
+
+```{r describe}
+  describe(MyData)
+```
+
+<br>
+<strong>CORRELAÇÃO DOS DADOS:</strong>
+<br>
+
+```{r ggcorr, echo=FALSE, fig.width=12, message=FALSE, warning=FALSE}
+  ggcorr(MyData, geom = 'text')
+```
+
+<br>
+<strong>CORRELAÇÃO COMPLETA DOS DADOS:</strong>
+<br>
+
+```{r ggpairs, fig.height=12, fig.width=12, message=FALSE, warning=FALSE}
+  ggpairs(MyData)
+```
