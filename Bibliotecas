@@ -1,4 +1,4 @@
-###### BIBLIOTECAS ######
+###### PACOTES ######
 require(plyr)
 require(Publish)
 require(car)
