@@ -1,8 +1,8 @@
-# R
-# RStudio
+# Linguagem R
+# Repositório
 
-Repositório para códigos e projetos R / RStudio
-Estruturas de códigos em R para consulta e uso.
+## Estruturas de códigos em R para consulta e uso.
 
 
-- Repositorio criado por: Matheus Pina Pallante
+- Autor: Matheus Pina Pallante.
+         ©2021 MPPallante.
