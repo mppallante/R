@@ -1,5 +1,12 @@
+### Nome : Banco de Dados         ### 
+### Tipo : Anotação               ###
+### Autor: Matheus Pina Pallante. ### 
+### Ano  : 2021                   ### 
+
+##### Pacotes
 require(odbc)
 require(DBI)
+require(data.table)
 
 ##### Conexão Banco de Dados
 conexao = function(){
