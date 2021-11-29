@@ -6,7 +6,7 @@ output:
   pdf_document: default
 ---
 
-<strong>DESCREVENDO A BASE DE DADOS:</strong>
+<strong>ANALISE DE BASE DE DADOS:</strong>
 <br>
 
 ```{r Pacotes, include=FALSE}
@@ -27,7 +27,7 @@ output:
 ```
 
 <br>
-<strong>PRIMEIRAS LINHAS:</strong> 
+<strong>INFORMACOES SOBRE A BASE DE DADOS</strong> 
 <br>
 
 ```{r glimpse, echo=FALSE}
@@ -35,7 +35,7 @@ output:
 ```
 
 <br>
-<strong>INFORMAÇÕES SOBRE AS COLUNAS:</strong>
+<strong>INFORMACOES SOBRE AS COLUNAS:</strong>
 <br>
 
 ```{r df_status, echo=FALSE}
@@ -43,7 +43,7 @@ output:
 ```
 
 <br>
-<strong>FREQUÊNCIA DOS DADOS CATEGORICOS:</strong>
+<strong>FREQUENCIA DOS DADOS CATEGORICOS:</strong>
 <br>
 
 ```{r freq, echo=FALSE, fig.width=12, message=TRUE, warning=TRUE}
@@ -51,7 +51,7 @@ output:
 ```
 
 <br>
-<strong>DESCRIÇÃO DOS DADOS NUMERICOS:</strong>
+<strong>DESCRICAO DOS DADOS NUMERICOS:</strong>
 <br>
 
 ```{r profiling_num, echo=FALSE}
@@ -59,7 +59,7 @@ output:
 ```
 
 <br>
-<strong>GRÁFICO DOS DADOS NUMERICOS:</strong>
+<strong>GRAFICO DOS DADOS NUMERICOS:</strong>
 <br>
 
 ```{r plot_num, echo=FALSE, fig.width=12}
@@ -67,7 +67,7 @@ output:
 ```
 
 <br>
-<strong>DESCRIÇÃO E ESTATISTICA GERAL DOS DADOS:</strong>
+<strong>DESCRICAO E ESTATISTICA GERAL DOS DADOS:</strong>
 <br>
 
 ```{r describe}
@@ -75,17 +75,21 @@ output:
 ```
 
 <br>
-<strong>CORRELAÇÃO DOS DADOS:</strong>
+<strong>CORRELACAO DOS DADOS:</strong>
 <br>
 
 ```{r ggcorr, echo=FALSE, fig.width=12, message=FALSE, warning=FALSE}
-  ggcorr(MyData, geom = 'text')
+ggcorr(MyData, geom = "blank", label = TRUE, hjust = 0.75) +
+  geom_point(size = 10, aes(color = coefficient > 0, alpha = abs(coefficient) > 0.5)) +
+  scale_alpha_manual(values = c("TRUE" = 0.25, "FALSE" = 0)) +
+  guides(color = FALSE, alpha = FALSE)
 ```
 
 <br>
-<strong>CORRELAÇÃO COMPLETA DOS DADOS:</strong>
+<strong>CORRELACAO COMPLETA DOS DADOS:</strong>
 <br>
 
 ```{r ggpairs, fig.height=12, fig.width=12, message=FALSE, warning=FALSE}
-  ggpairs(MyData)
+  ggpairs(MyData,
+          aes(color = Species))
 ```
